@@ -1,5 +1,23 @@
 # JuliaPlayground
 
+
+To read a script in Julia you should
+
+Open Julia in your terminal with
+
+julia
+
+Inside the language prompt you should do:
+
+	include("script_name")
+	
+To load this scrit you should do
+
+	incude("src/main.jl")
+	
+It will load all the functions we are going to explain.
+
+
 Julia can create it's own "virtual machines" with the command addprcs().
 In other database systems if we want to create a cluster we'd need to to call 2 or more physical machines or emulate them with VMware or Docker. In Julia we can just create these machines with
    
@@ -57,6 +75,11 @@ If you want to store may objects of the type Person, you can create an array and
 	array = remote_push(array,Person("Caio",24)
 	array = remote_push(array,Person("Thiago",23)
 	fetch(array)
+	
+	
+	
+Let's say worker 1 is C, worker 2 is A and worker 3 is B
+You can create a database in A, another in B and access them from C with the commands listed.
 	
 
 
